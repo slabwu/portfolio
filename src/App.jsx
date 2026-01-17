@@ -7,7 +7,7 @@ import Draggable from "./Draggable.jsx"
 export default function App() {
     return <>
         <Environment>
-            <Draggable>
+            <Draggable position={ [ 0, -1.25, 0 ] }>
                 <boxGeometry args={ [ 10, 0.5, 10 ] } />
                 <meshStandardMaterial color="greenyellow" />
             </Draggable>

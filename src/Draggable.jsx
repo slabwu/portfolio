@@ -1,9 +1,9 @@
 import { PivotControls } from "@react-three/drei"
 import { RigidBody } from "@react-three/rapier"
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 import * as THREE from "three"
 
-export default function Draggable({ children }) {
+export default function Draggable({ position = [ 0, 0, 0 ], children }) {
     const body = useRef()
     const mesh = useRef()
 
@@ -20,19 +20,19 @@ export default function Draggable({ children }) {
         
                 body.current.setNextKinematicTranslation(pos)
                 body.current.setNextKinematicRotation(quat)
-                mesh.current.position.set(pos.x, pos.y, pos.z);
+                mesh.current.position.set(pos.x + position[0], pos.y + position[1], pos.z + position[2]);
                 mesh.current.quaternion.set(quat.x, quat.y, quat.z, quat.w)
             }}
         >
             <RigidBody ref={ body } type="kinematicPosition">
-                <mesh receiveShadow>
+                <mesh position={ position }>
                     { children }
                     <meshStandardMaterial transparent opacity={0} />
                 </mesh>
             </RigidBody>
         </PivotControls>
         
-        <mesh ref={ mesh } receiveShadow>
+        <mesh ref={ mesh } position={ position } receiveShadow>
             { children }
         </mesh>
     </>
