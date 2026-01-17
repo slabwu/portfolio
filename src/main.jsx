@@ -1,17 +1,12 @@
-import { StrictMode } from 'react'
+import './style.css'
 import { createRoot } from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
-import './style.css'
+import App from './App.jsx'
 
 const root = createRoot(document.getElementById('root'))
 
 root.render(
-  <StrictMode>
-    <Canvas>
-      <mesh>
-          <torusKnotGeometry />
-          <meshNormalMaterial />
-      </mesh>
-    </Canvas>
-  </StrictMode>
+  <Canvas>
+    <App />
+  </Canvas>
 )
