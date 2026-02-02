@@ -13,7 +13,7 @@ export default function Configuration({ children }) {
         <directionalLight position={ [ 1, 2, 3 ] } intensity={ 4.5 } />
         <ambientLight intensity={ 1.5 } />
 
-        <Physics debug>
+        <Physics>
             { children }
         </Physics>
     </>

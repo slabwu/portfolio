@@ -1,5 +1,6 @@
 import { InstancedRigidBodies } from "@react-three/rapier"
 import { useMemo } from "react"
+import Material from "./Material.jsx"
 
 export default function Marbles() {
     const count = 100
@@ -26,16 +27,8 @@ export default function Marbles() {
     return <InstancedRigidBodies instances={ instances } colliders="ball">
         <instancedMesh args={ [ null, null, count] }>
             <sphereGeometry args={ [ 0.4, 16, 16 ] } />
-            {/* <meshPhysicalMaterial
-                color="#9ad7ff"
-                transmission={1}     
-                thickness={0.5}      
-                roughness={0}         
-                metalness={0}
-                ior={1.45}            
-                envMapIntensity={1.2}
-            /> */}
-            <meshStandardMaterial color="red"/>
+            <Material type="glass" />
+            <Material type="red" />
         </instancedMesh>
     </InstancedRigidBodies>
 }
