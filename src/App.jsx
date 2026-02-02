@@ -12,6 +12,11 @@ export default function App() {
                 <meshStandardMaterial color="greenyellow" />
             </Draggable>
 
+            <Draggable position={ [ 0, 2, 0 ] } collider="ball">
+                <sphereGeometry />
+                <meshStandardMaterial color="white" />
+            </Draggable>
+
             <Twister />
             <Border />
             <Marbles />
