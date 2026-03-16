@@ -1,7 +1,7 @@
 import './style.css'
 import { createRoot } from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
-import App from './App.jsx'
+import App from './X.jsx'
 
 const root = createRoot(document.getElementById('root'))
 
