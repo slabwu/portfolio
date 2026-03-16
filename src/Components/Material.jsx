@@ -1,3 +1,5 @@
+import { Color } from "three"
+
 export default function Material({ type = "greenyellow" }) {
     switch (type) {
         case "glass":
@@ -10,7 +12,16 @@ export default function Material({ type = "greenyellow" }) {
                 ior={1.45}            
                 envMapIntensity={1.2}
             />
+        case "transparent":
+            return <meshStandardMaterial transparent opacity={0}/>
         default:
-            return <meshStandardMaterial color={ type } />
+            let color
+            try {
+                color = new Color(type)
+            } catch {
+                console.warn(`Invalid color "${type}", defaulting to white`);
+                color = new Color("white")
+            }
+            return <meshStandardMaterial color={ color } />
     } 
 }
