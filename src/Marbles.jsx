@@ -3,7 +3,7 @@ import { useMemo } from "react"
 import Material from "./Material.jsx"
 
 export default function Marbles() {
-    const count = 100
+    const count = 500
     const random = () => Math.random() - 0.5
     
     const instances = useMemo(() => {

@@ -5,7 +5,6 @@ import * as THREE from "three"
 
 export default function Draggable({ position = [ 0, 0, 0 ], rotation = [ 0, 0, 0 ], collider = "cuboid", children }) {
     const body = useRef()
-    const mesh = useRef()
     const eulerRotation = new THREE.Euler(...rotation)
 
     return <>
@@ -24,7 +23,7 @@ export default function Draggable({ position = [ 0, 0, 0 ], rotation = [ 0, 0, 0
                 body.current.setNextKinematicRotation(quat)
             }}
         >
-            <mesh position={ position } rotation={ eulerRotation } ref={ mesh }>
+            <mesh position={ position } rotation={ eulerRotation }>
                 { children }
                 <meshStandardMaterial transparent opacity={0}/>
             </mesh>
