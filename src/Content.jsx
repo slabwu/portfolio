@@ -1,5 +1,9 @@
 export default function Content() {
     return <>
-        <h1>Hi!</h1>
+        <content>
+            <p>This is a paragraph.</p>
+            <p>This is a paragraph.</p>
+            <p>This is a paragraph.</p>
+        </content>
     </>
 }

@@ -8,9 +8,9 @@ import Text from "./Components/Text.jsx"
 
 export default function PhysicsObject() {
     return <>
-            <Text position={ [ 0, -10, 0 ] }>Hi!</Text>
+            <Text position={ [ -1.2, 2, 2 ] }>Testing!</Text>
 
-            <Object collider="ball">
+            <Object collider="ball" hollowSize={ 2 }>
                 <sphereGeometry />
                 <Material type="transparent" />
             </Object>

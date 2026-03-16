@@ -1,6 +1,6 @@
 import { Color } from "three"
 
-export default function Material({ type = "greenyellow" }) {
+export default function Material({ type = "white" }) {
     switch (type) {
         case "glass":
             return <meshPhysicalMaterial

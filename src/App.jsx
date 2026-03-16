@@ -8,7 +8,7 @@ export default function App() {
     return <>
         <Perf position="top-left" />
 
-        <Environment preset="studio" />
+        <Environment preset="city" />
 
         <directionalLight position={ [ 1, 2, 3 ] } intensity={ 4.5 } />
         <ambientLight intensity={ 1.5 } />

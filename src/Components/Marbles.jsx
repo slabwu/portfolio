@@ -13,9 +13,9 @@ export default function Marbles() {
             instances.push({
                 key: 'instance_' + i,
                 position: [ 
-                    random() * 8, 
-                    6 + i * 0.2, 
-                    random() * 8
+                    random() * 4, 
+                    1 + i * 0.2, 
+                    random() * 4
                 ],
                 rotation: [ 0, 0, 0 ]
             })
@@ -28,7 +28,7 @@ export default function Marbles() {
         <instancedMesh args={ [ undefined, undefined, count] } frustumCulled={false}>
             <sphereGeometry args={ [ 0.4, 16, 16 ] } />
             {/* <Material type="glass" /> */}
-            <Material type="red" />
+            <Material type="turquoise" />
         </instancedMesh>
     </InstancedRigidBodies>
 }
