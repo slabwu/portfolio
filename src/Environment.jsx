@@ -20,7 +20,7 @@ export default function Configuration({ children }) {
                 </Physics>
             </Scroll>
             <Scroll html>
-                {/* Test */}
+                <h1>Hello!</h1>
             </Scroll>
         </ScrollControls>
     </>

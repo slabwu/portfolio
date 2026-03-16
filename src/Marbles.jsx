@@ -25,9 +25,9 @@ export default function Marbles() {
     }, [])
 
     return <InstancedRigidBodies instances={ instances } colliders="ball">
-        <instancedMesh args={ [ null, null, count] }>
+        <instancedMesh args={ [ undefined, undefined, count] } frustumCulled={false}>
             <sphereGeometry args={ [ 0.4, 16, 16 ] } />
-            <Material type="glass" />
+            {/* <Material type="glass" /> */}
             <Material type="red" />
         </instancedMesh>
     </InstancedRigidBodies>

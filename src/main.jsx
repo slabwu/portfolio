@@ -6,7 +6,7 @@ import App from './App.jsx'
 const root = createRoot(document.getElementById('root'))
 
 root.render(
-  <Canvas>
+  <Canvas camera={{ position: [ 0, 3, 12 ], fov: 45 }}>
     <App />
   </Canvas>
 )
