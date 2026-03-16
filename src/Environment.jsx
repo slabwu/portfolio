@@ -1,6 +1,7 @@
 import { OrbitControls, Environment, ScrollControls, Scroll } from "@react-three/drei"
 import { Physics } from "@react-three/rapier"
 import { Perf } from "r3f-perf"
+import Content from "./Content.jsx"
 
 export default function Configuration({ children }) {
     return <>
@@ -20,7 +21,7 @@ export default function Configuration({ children }) {
                 </Physics>
             </Scroll>
             <Scroll html>
-                <h1>Hello!</h1>
+                <Content />
             </Scroll>
         </ScrollControls>
     </>
